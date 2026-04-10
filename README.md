@@ -11,7 +11,7 @@ It tracks packages through a simple lifecycle using a state machine.
 go test -race -v ./...
 
 # Run the demo
-go run main.go
+go run cmd/delivery/main.go
 
 # Check coverage
 go test -coverprofile=cover.out ./pkg/delivery/ && go tool cover -func=cover.out
