@@ -21,7 +21,7 @@ go test -coverprofile=cover.out ./pkg/delivery/ && go tool cover -func=cover.out
 
 ## Approach
 
-I went with a state machine (the exercise called it Option B). Each package moves through fixed states:
+I went with a state machine. Each package moves through fixed states:
 
 ```
 created -> pickup -> in_transit -> delivered
