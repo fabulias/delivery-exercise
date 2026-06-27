@@ -45,7 +45,8 @@ jobs:
           # Optional: Configure Claude's behavior with CLI arguments
           claude_args: |
             --model claude-haiku-4-5
-          #   --max-turns 10
+            --max-turns 10
+            --append-system-prompt "Ensure all new code has tests; you're main work is to help the dev to understand what's the issue and how to fix"
           #   --allowedTools "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
           #   --system-prompt "Follow our coding standards. Ensure all new code has tests. Use TypeScript for new files."
 
