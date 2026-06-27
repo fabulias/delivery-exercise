@@ -15,6 +15,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Hello world")
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelInfo}))
 	slog.SetDefault(logger)
 
