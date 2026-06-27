@@ -19,7 +19,7 @@ type Option func(*Updater)
 
 // WithMaxRetries sets the maximum number of update retry attemps
 func WithMaxRetries(n int) Option {
-	return func(u *Updater) { u.maxRetriesL = n }
+	return func(u *Updater) { u.maxRetries = n }
 }
 
 // WithRetryBaseDelay sets the base delay for exponential backoff retries
@@ -49,7 +49,7 @@ func (u *Updater) UpdateTrackingSystem(ctx context.Context, packageID string, st
 	return u.withRetry(ctx, func() error {
 		u.logger.Info("tracking system updated",
 			slog.String("packageID", packageID),
-			slog.String("status tracking --->", string(status)),
+			slog.String("status", string(status)),
 		)
 		return nil
 	})
